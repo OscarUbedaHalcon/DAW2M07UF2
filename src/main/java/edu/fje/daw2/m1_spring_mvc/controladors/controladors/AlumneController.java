@@ -4,10 +4,13 @@ import edu.fje.daw2.m1_spring_mvc.model.Alumne;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Controlador principal del projecte
@@ -18,14 +21,40 @@ import java.util.List;
 @Controller
 public class AlumneController {
 
-    List<Alumne> alumnes = new ArrayList<>();
+    Set<Alumne> alumnes = new HashSet<>();
 
-    @GetMapping("/afegirAlumne")
+    @PostMapping("/afegirAlumne")
     public String afegirAlumne(
                         @RequestParam String nom,
                         @RequestParam(defaultValue = "0", required = false) int nota,
                         Model model) {
         alumnes.add(new Alumne(nom, nota));
+        model.addAttribute("alumnes", alumnes);
+        return "llistarAlumnes";
+    }
+
+    @PostMapping("/esborrarAlumne")
+    public String esborrarAlumne(
+            @RequestParam String nom,
+            @RequestParam(defaultValue = "0", required = false) int nota,
+            Model model) {
+        alumnes.remove(new Alumne(nom, nota));
+        model.addAttribute("alumnes", alumnes);
+        return "llistarAlumnes";
+    }
+    @PostMapping("/modificarAlumne")
+    public String modificarAlumne(
+            @RequestParam String nom,
+            @RequestParam(defaultValue = "0", required = false) int nota,
+            Model model) {
+        alumnes.remove(new Alumne(nom, nota));
+        alumnes.add(new Alumne(nom, nota));
+        model.addAttribute("alumnes", alumnes);
+        return "llistarAlumnes";
+    }
+
+    @GetMapping("/llistarAlumnes")
+    public String llistarAlumnes(Model model){
         model.addAttribute("alumnes", alumnes);
         return "llistarAlumnes";
     }

@@ -31,4 +31,19 @@ public class Alumne  implements Serializable {
                 ", nota=" + nota +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Alumne alumne = (Alumne) o;
+
+        return nom.equals(alumne.nom);
+    }
+
+    @Override
+    public int hashCode() {
+        return nom.hashCode();
+    }
 }

@@ -10,14 +10,25 @@
 
 <div class="container">
 
-    <img src="spring-logo.svg" alt="Spring">
-    <form action="/salutacio" method="get">
-        <div class="mb-3">
-            <label for="nom" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="nom" name="nom" placeholder="Entra el nom">
+    <img src="spring-logo.svg" alt="Spring" style="width: 25%">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">DAW2 Spring</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" href="/afegirAlumne.html">Afegir alumne</a>
+                    <a class="nav-link" href="/esborrarAlumne.html">Esborrar alumne</a>
+                    <a class="nav-link" href="/modificarAlumne.html">Modificar alumne</a>
+                    <a class="nav-link" href="/llistarAlumnes">llistar alumnes</a>
+                </div>
+            </div>
         </div>
-        <input class="btn btn-primary" type="submit" value="envia">
-    </form>
+    </nav>
 </div>
 
 </body>
