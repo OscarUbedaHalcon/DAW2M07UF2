@@ -1,4 +1,4 @@
-package edu.fje.daw2.m1_spring_mvc.controladors.controladors;
+package edu.fje.daw2.m1_spring_mvc.controladors;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

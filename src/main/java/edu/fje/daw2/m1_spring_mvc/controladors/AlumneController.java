@@ -1,4 +1,4 @@
-package edu.fje.daw2.m1_spring_mvc.controladors.controladors;
+package edu.fje.daw2.m1_spring_mvc.controladors;
 
 import edu.fje.daw2.m1_spring_mvc.model.Alumne;
 import org.springframework.stereotype.Controller;
@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
