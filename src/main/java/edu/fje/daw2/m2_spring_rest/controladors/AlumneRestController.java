@@ -1,6 +1,6 @@
 package edu.fje.daw2.m2_spring_rest.controladors;
 
-import edu.fje.daw2.m1_spring_mvc.model.Alumne;
+import edu.fje.daw2.model.Alumne;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 

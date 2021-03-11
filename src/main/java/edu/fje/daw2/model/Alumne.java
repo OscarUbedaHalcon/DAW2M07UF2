@@ -1,4 +1,4 @@
-package edu.fje.daw2.m1_spring_mvc.model;
+package edu.fje.daw2.model;
 
 import java.io.Serializable;
 
